@@ -1,0 +1,5 @@
+!define TEST_SYSTEM {slim}
+
+Choose one of the >ConcreteTests for a programming language or go into the >ConcreteTests and run the whole test suite for all languages from there.
+
+!contents -R2 -g -p -f -h

@@ -1,0 +1,8 @@
+!define TEST_RUNNER {fitnesse.slim.SlimService}
+
+!path ${FITNESSE_ROOTPATH}/fitnesse/fitnesse.jar
+!path ${FITNESSE_ROOTPATH}/bin
+
+!define COMMAND_PATTERN (java -cp %p %m)
+
+!contents

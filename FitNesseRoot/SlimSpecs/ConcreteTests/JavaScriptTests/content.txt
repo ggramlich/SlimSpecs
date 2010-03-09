@@ -1,0 +1,7 @@
+!define TEST_RUNNER {jsSlim.JsSlimService}
+
+!path ${FITNESSE_ROOTPATH}/fitnesse/jsSlim.jar
+
+!define COMMAND_PATTERN (java -cp %p %m -i ${FITNESSE_ROOTPATH}/javascript)
+
+!contents
