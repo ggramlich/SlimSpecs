@@ -1,0 +1,7 @@
+!define TEST_RUNNER (${FITNESSE_ROOTPATH}/fitnesse/rubyslim/run_ruby_slim.rb)
+!define COMMAND_PATTERN {ruby -I %p %m}
+!define PATH_SEPARATOR { -I }
+!path ${FITNESSE_ROOTPATH}/fitnesse/rubyslim
+!path ${FITNESSE_ROOTPATH}/ruby
+
+!contents
