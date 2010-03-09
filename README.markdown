@@ -21,6 +21,9 @@ Java
 Open the project in Eclipse and build it to make sure that the
 fixtures are compiled in the bin folder.
 
+Put a fitnesse.jar into the fitnesse folder. I left this out, because
+otherwise it would consume a lot of memory from my github repository.
+
 PHP
 ---
 
