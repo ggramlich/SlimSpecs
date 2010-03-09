@@ -1,0 +1,4 @@
+!define TEST_RUNNER (${FITNESSE_ROOTPATH}/fitnesse/fitSharp/Runner.exe)
+!define COMMAND_PATTERN (%m -r fitSharp.Slim.Service.Runner,${FITNESSE_ROOTPATH}/fitnesse/fitSharp/fitSharp.dll ${FITNESSE_ROOTPATH}/mono/SlimSpecs/bin/Release/SlimSpecs.dll)
+
+!contents
