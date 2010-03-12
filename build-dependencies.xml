@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SlimSpecsDependencies" default="all">
+
+    <property name="libdir" value="fitnesse"/>
+    
+    <target name="build-dependencies" depends="build-fitnesse, build-phpslim, build-jsslim, build-rubyslim" />
+    
+    <target name="build-fitnesse">
+        <!--
+            ant and subant tasks do not work,
+            they stops with an error on createUpdateList
+        -->
+        <exec executable="ant" dir="../fitnesse">
+            <arg value="jar"/>
+        </exec>
+        <copy todir="${libdir}">
+            <fileset dir="../fitnesse/dist" />
+        </copy>
+    </target>
+    
+    <target name="build-phpslim">
+        <ant antfile="build/build.xml" target="jar" dir="../phpslim"/>
+        <copy todir="${libdir}">
+            <fileset dir="../phpslim/dist" />
+        </copy>
+    </target>
+
+    <target name="build-jsslim">
+        <ant target="jar" dir="../JsSlim"/>
+        <copy todir="${libdir}">
+            <fileset dir="../JsSlim/dist" />
+        </copy>
+    </target>
+    
+    <target name="build-rubyslim">
+        <copy todir="${libdir}/rubyslim">
+            <fileset dir="../rubyslim/lib" />
+        </copy>
+    </target>
+</project>

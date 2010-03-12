@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SlimSpecs" default="all">
+
+    <import file="build-dependencies.xml" />
+    
+    <target name="all" depends="build-dependencies, build-fixtures" />
+
+    <target name="build-fixtures" depends="build-mono-fixtures, build-java-fixtures" />
+    
+    <target name="build-mono-fixtures">
+        <exec executable="nant">
+            <arg value="build-fixtures"/>
+        </exec>
+    </target>
+    
+    <target name="build-java-fixtures">
+        <delete dir="bin"/>
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin" />
+    </target>
+
+</project>

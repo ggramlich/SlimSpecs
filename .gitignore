@@ -1,4 +1,7 @@
 *~
 bin
 fitnesse/fitnesse.jar
+fitnesse/jsSlim.jar
+fitnesse/phpslim.jar
+fitnesse/rubyslim
 
