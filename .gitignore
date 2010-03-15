@@ -4,4 +4,15 @@ fitnesse/fitnesse.jar
 fitnesse/jsSlim.jar
 fitnesse/phpslim.jar
 fitnesse/rubyslim
+#FitNesseRoot/FitNesse/
+FitNesseRoot/FitNesse/*Acceptance*
+FitNesseRoot/FitNesse/Sample*
+FitNesseRoot/FitNesse/Junk*
+FitNesseRoot/FitNesse/ReadProtectedPage
+FitNesseRoot/FitNesse/SliM
+
+FitNesseRoot/files/images/FitNesseLogo.psd
+FitNesseRoot/files/images/Thumbs.db
+FitNesseRoot/files/images/*/Thumbs.db
+target
 

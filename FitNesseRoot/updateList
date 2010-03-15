@@ -52,6 +52,8 @@ FitNesseRoot/FitNesse/FitNesse/content.txt
 FitNesseRoot/FitNesse/FitNesse/properties.xml
 FitNesseRoot/FitNesse/JunkPage/content.txt
 FitNesseRoot/FitNesse/JunkPage/properties.xml
+FitNesseRoot/FitNesse/ReadProtectedPage/content.txt
+FitNesseRoot/FitNesse/ReadProtectedPage/properties.xml
 FitNesseRoot/FitNesse/SampleWiki/ChildPageOne/GrandChildPageOne/GreatGrandChildPageOne/content.txt
 FitNesseRoot/FitNesse/SampleWiki/ChildPageOne/GrandChildPageOne/GreatGrandChildPageOne/properties.xml
 FitNesseRoot/FitNesse/SampleWiki/ChildPageOne/GrandChildPageOne/content.txt

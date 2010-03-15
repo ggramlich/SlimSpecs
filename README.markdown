@@ -13,37 +13,42 @@ the -d option to point to this directory.
 
 Here are some hints what you need to do to get the tests to run.
 
-I plan to write an ant script that automates some of these points.
+The ant script builds the SlimRunners from directories that
+are positioned parallel to the SlimSpecs directory.
+
+The dependency handling will be improved soon.
 
 Java
 ----
 
-Open the project in Eclipse and build it to make sure that the
-fixtures are compiled in the bin folder.
-
-Put a fitnesse.jar into the fitnesse folder. I left this out, because
-otherwise it would consume a lot of memory from my github repository.
+fitnesse from http://github.com/unclebob/fitnesse
 
 PHP
 ---
 
 Make sure that you have a PHP CGI version installed.
 
+phpslim from http://github.com/ggramlich/phpslim
+
 JavaScript
 ----------
 
-Should run out of the box.
+JsSlim from http://github.com/ggramlich/JsSlim
 
 C# (Mono)
 ---------
 
-Compile the project so that a
-mono/SlimSpecs/bin/Release/SlimSpecs.dll is generated.
+The Slim runner is not automatically built yet, but are in fitnesse/fitSharp.
+I will build that from http://github.com/jediwhale/fitsharp.
+
+Fixtures are compiled with nant.
 
 Ruby
 ----
 
 Make sure you have a ruby installation.
+
+rubyslim from http://github.com/unclebob/rubyslim
 
 Planned:
 --------

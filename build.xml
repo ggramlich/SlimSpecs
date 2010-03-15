@@ -3,8 +3,13 @@
 
     <import file="build-dependencies.xml" />
     
-    <target name="all" depends="build-dependencies, build-fixtures" />
+    <target name="all" depends="build" />
 
+    <target name="build" depends="build-dependencies, build-fixtures, build-java-tests" />
+<!--
+    <target name="build" depends="build-fixtures, build-java-tests" />
+-->
+    
     <target name="build-fixtures" depends="build-mono-fixtures, build-java-fixtures" />
     
     <target name="build-mono-fixtures">
@@ -13,10 +18,59 @@
         </exec>
     </target>
     
-    <target name="build-java-fixtures">
+    <target name="clean">
         <delete dir="bin"/>
         <mkdir dir="bin"/>
+    </target>
+    
+    <target name="build-java-fixtures" depends="clean">
         <javac srcdir="src" destdir="bin" />
+    </target>
+
+    <target name="build-java-tests" depends="clean">
+        <javac srcdir="test" destdir="bin" classpathref="classpath" />
+    </target>
+
+    <path id="lib">
+        <fileset dir="lib" includes="*.jar" />
+    </path>
+    
+    <path id="dependencies">
+        <fileset dir="fitnesse" includes="*.jar" />
+    </path>
+    
+    <path id="classpath">
+        <path refid="lib" />
+        <path refid="dependencies" />
+    </path>
+
+    <path id="test-classpath">
+        <path refid="classpath" />
+        <pathelement path="target/classes"/>
+    </path>
+
+    <target name="test-compile" depends="build">
+        <delete dir="target/test-classes" />
+        <mkdir dir="target/test-classes" />
+        <javac 
+            srcdir="test" 
+            destdir="target/test-classes" 
+            classpathref="test-classpath" />
+    </target>
+
+    <target name="run-fitnesse-tests" depends="test-compile">
+        <delete dir="target/test-reports" />
+        <mkdir dir="target/test-reports" />
+        <junit printsummary="true" haltonerror="false" haltonfailure="false" showoutput="false">
+            <classpath>
+                <path refid="test-classpath" />
+                <pathelement path="target/test-classes"/>
+            </classpath>
+            <batchtest todir="target/test-reports/">
+                <fileset dir="target/test-classes" includes="**/*Test.class" />
+            </batchtest>
+            <formatter type="xml" />
+        </junit>
     </target>
 
 </project>
