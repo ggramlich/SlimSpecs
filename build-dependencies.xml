@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="SlimSpecsDependencies" default="all">
+<project name="SlimSpecsDependencies">
 
-    <property name="libdir" value="fitnesse"/>
+    <property name="fitnessedir" value="fitnesse"/>
     
-    <target name="build-dependencies" depends="build-fitnesse, build-phpslim, build-jsslim, build-rubyslim" />
+    <target name="build-dependencies" if="update-dependencies">
+        <antcall target="build-local-dependencies" />
+        <antcall target="build-hudson-dependencies" />
+    </target>
     
+    <target name="build-local-dependencies" unless="hudsonbuild">
+        <antcall target="build-fitnesse" />
+        <antcall target="build-phpslim" />
+        <antcall target="build-jsslim" />
+        <antcall target="build-rubyslim" />
+    </target>
+
+    <target name="build-hudson-dependencies" if="hudsonbuild">
+        <copy todir="${fitnessedir}">
+            <fileset dir="${fitnessedir}/dist">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${fitnessedir}/rubyslim">
+            <fileset dir="${fitnessedir}/dist/rubyslim/lib" />
+        </copy>
+    </target>
+
     <target name="build-fitnesse">
         <!--
             ant and subant tasks do not work,
@@ -13,27 +34,27 @@
         <exec executable="ant" dir="../fitnesse">
             <arg value="jar"/>
         </exec>
-        <copy todir="${libdir}">
+        <copy todir="${fitnessedir}">
             <fileset dir="../fitnesse/dist" />
         </copy>
     </target>
     
     <target name="build-phpslim">
         <ant antfile="build/build.xml" target="jar" dir="../phpslim"/>
-        <copy todir="${libdir}">
+        <copy todir="${fitnessedir}">
             <fileset dir="../phpslim/dist" />
         </copy>
     </target>
 
     <target name="build-jsslim">
         <ant target="jar" dir="../JsSlim"/>
-        <copy todir="${libdir}">
+        <copy todir="${fitnessedir}">
             <fileset dir="../JsSlim/dist" />
         </copy>
     </target>
     
     <target name="build-rubyslim">
-        <copy todir="${libdir}/rubyslim">
+        <copy todir="${fitnessedir}/rubyslim">
             <fileset dir="../rubyslim/lib" />
         </copy>
     </target>
