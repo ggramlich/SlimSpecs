@@ -5,17 +5,11 @@
     
     <target name="all" depends="build" />
 
-    <taskdef name="mono-compile"
-             classname="org.apache.ant.dotnet.build.NAntTask">
-        <classpath>
-        <pathelement location="lib/ant-dotnet-1.0.jar"/>
-      </classpath>
+    <taskdef name="mono-compile" classname="org.apache.ant.dotnet.build.NAntTask">
+        <classpath location="lib/ant-dotnet-1.0.jar" />
     </taskdef>
 
     <target name="build" depends="build-dependencies, build-fixtures, build-java-tests" />
-<!--
-    <target name="build" depends="build-fixtures, build-java-tests" />
--->
     
     <target name="build-fixtures" depends="build-mono-fixtures, build-java-fixtures" />
     
