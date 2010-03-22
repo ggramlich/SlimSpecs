@@ -1,0 +1,3 @@
+!define COMMAND_PATTERN (python3 -m waferslim.server --syspath ${FITNESSE_ROOTPATH}/python --port)
+
+!contents
