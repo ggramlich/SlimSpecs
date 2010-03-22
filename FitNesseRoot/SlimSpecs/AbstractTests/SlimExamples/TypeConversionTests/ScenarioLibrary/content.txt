@@ -1,0 +1,8 @@
+!|scenario|the value|input |converts to the integer|output|
+|start    |echo fixture                                   |
+|check    |echo int |@input|@output                       |
+
+!|scenario|the value  |input |converts to the double|output|
+|start    |echo fixture                                    |
+|check    |echo double|@input|@output                      |
+|check    |echo float |@input|@output                      |

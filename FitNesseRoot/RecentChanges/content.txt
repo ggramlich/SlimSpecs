@@ -1,3 +1,9 @@
+|SlimSpecs.ConcreteTests.SetUp||22:10:42 Mo, Mrz 22, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.DoubleTest||22:03:11 Mo, Mrz 22, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.ScenarioLibrary||22:00:28 Mo, Mrz 22, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.IntegerTest||21:56:05 Mo, Mrz 22, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.SetUp||21:45:19 Mo, Mrz 22, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.EchoStringTest||21:45:06 Mo, Mrz 22, 2010|
 |SlimSpecs.ConcreteTests.PythonTests||23:02:24 So, Mrz 21, 2010|
 |SlimSpecs.ConcreteTests.MonoCsharpTests||22:03:46 Di, Mrz 09, 2010|
 |SlimSpecs.ConcreteTests.RubyTests||22:02:52 Di, Mrz 09, 2010|
@@ -12,5 +18,4 @@
 |FitNesse||19:25:46 Di, Mrz 09, 2010|
 |SlimSpecs.ConcreteTests.PhpTests.SlimExamples.EchoStringTest||19:14:56 Di, Mrz 09, 2010|
 |SlimSpecs.AbstractTests.SlimExamples.EchoStringTest||18:41:02 Di, Mrz 09, 2010|
-|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.EchoStringTest||18:29:32 Di, Mrz 09, 2010|
 |SlimSpecs.ConcreteTests||18:23:40 Di, Mrz 09, 2010|

@@ -1,6 +1,3 @@
-|import         |
-|fixtures.basics|
-
 -|script|
 |start|echo fixture           |
 |check|echo string|Hello|Hello|
