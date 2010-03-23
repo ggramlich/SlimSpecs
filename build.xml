@@ -66,7 +66,7 @@
     <target name="run-fitnesse-tests" depends="test-compile">
         <delete dir="target/test-reports" />
         <mkdir dir="target/test-reports" />
-        <junit printsummary="true" haltonerror="false" haltonfailure="true" showoutput="false">
+        <junit printsummary="true" haltonerror="false" haltonfailure="false" showoutput="false" failureproperty="failureoccured">
             <classpath>
                 <path refid="test-classpath" />
                 <pathelement path="target/test-classes"/>
@@ -76,6 +76,7 @@
             </batchtest>
             <formatter type="xml" />
         </junit>
+        <fail if="failureoccured" message="fitnesse tests failed"/>
     </target>
 
 </project>
