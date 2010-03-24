@@ -63,6 +63,11 @@
       <filter>lib/**</filter>
       <target>fitnesse/dist/rubyslim</target>
     </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.plugins.copyartifact.CopyArtifact>
+      <projectName>WaferSlim</projectName>
+      <filter>**</filter>
+      <target>fitnesse/waferslim</target>
+    </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Ant>
       <targets>clean run-fitnesse-tests</targets>
       <properties>hudsonbuild=true

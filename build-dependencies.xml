@@ -13,6 +13,7 @@
         <antcall target="build-phpslim" />
         <antcall target="build-jsslim" />
         <antcall target="build-rubyslim" />
+        <antcall target="build-waferslim" />
     </target>
 
     <target name="build-hudson-dependencies" if="hudsonbuild">
@@ -24,6 +25,7 @@
         <copy todir="${fitnessedir}/rubyslim">
             <fileset dir="${fitnessedir}/dist/rubyslim/lib" />
         </copy>
+        <antcall target="local-python"></antcall>
     </target>
 
     <target name="build-fitnesse">
@@ -57,5 +59,16 @@
         <copy todir="${fitnessedir}/rubyslim">
             <fileset dir="../rubyslim/lib" />
         </copy>
+    </target>
+
+    <target name="build-waferslim">
+        <copy todir="${fitnessedir}/waferslim">
+            <fileset dir="../waferslim" />
+        </copy>
+        <antcall target="local-python"></antcall>
+    </target>
+
+    <target name="local-python">
+        <chmod perm="755" file="${fitnessedir}/waferslim/local-python3.sh"></chmod>
     </target>
 </project>
