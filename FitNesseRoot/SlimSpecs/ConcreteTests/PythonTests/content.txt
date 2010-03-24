@@ -1,3 +1,8 @@
 !define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/fitnesse/waferslim/local-python3.sh -m waferslim.server --syspath ../../../python --port)
 
+!-WaferSlim-! seems to have some problems blocking the slim port.
+http://fitnesse.org/FitNesse.UserGuide.SliM.SlimProtocol.PortManagement
+
+!define SLIM_PORT {8088}
+
 !contents

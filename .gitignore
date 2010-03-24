@@ -4,6 +4,7 @@ fitnesse/fitnesse.jar
 fitnesse/jsSlim.jar
 fitnesse/phpslim.jar
 fitnesse/rubyslim
+fitnesse/waferslim
 #FitNesseRoot/FitNesse/
 FitNesseRoot/FitNesse/*Acceptance*
 FitNesseRoot/FitNesse/Sample*

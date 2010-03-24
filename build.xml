@@ -2,7 +2,7 @@
 <project name="SlimSpecs" default="all">
 
     <import file="build-dependencies.xml" />
-    
+
     <target name="all" depends="build" />
 
     <taskdef name="mono-compile" classname="org.apache.ant.dotnet.build.NAntTask">
@@ -66,17 +66,39 @@
     <target name="run-fitnesse-tests" depends="test-compile">
         <delete dir="target/test-reports" />
         <mkdir dir="target/test-reports" />
-        <junit printsummary="true" haltonerror="false" haltonfailure="false" showoutput="false" failureproperty="failureoccured">
+        <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="JavaScript" />
+        </antcall>
+        <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="MonoCsharp" />
+        </antcall>
+        <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="Php" />
+        </antcall>
+        <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="Ruby" />
+        </antcall>
+        <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="Java" />
+        </antcall>
+        <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="Python" />
+        </antcall>
+        <fail if="failureoccured" message="fitnesse tests failed"/>
+    </target>
+
+    <target name="run-fitnesse-suite">
+        <echo message="Executing suite: ${suitename}." />
+        <junit printsummary="true" haltonerror="false" haltonfailure="false" showoutput="false" failureproperty="failureoccured" >
             <classpath>
                 <path refid="test-classpath" />
                 <pathelement path="target/test-classes"/>
             </classpath>
             <batchtest todir="target/test-reports/">
-                <fileset dir="target/test-classes" includes="**/*Test.class" />
+                <fileset dir="target/test-classes" includes="**/${suitename}SuiteTest.class" />
             </batchtest>
             <formatter type="xml" />
         </junit>
-        <fail if="failureoccured" message="fitnesse tests failed"/>
     </target>
-
+	
 </project>
