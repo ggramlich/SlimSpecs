@@ -28,7 +28,7 @@
     </target>
     
     <target name="build-java-fixtures" depends="clean">
-        <javac srcdir="src" destdir="bin" />
+        <javac srcdir="src" destdir="bin" classpathref="classpath" />
     </target>
 
     <target name="build-java-tests" depends="clean">
@@ -46,6 +46,7 @@
     <path id="classpath">
         <path refid="lib" />
         <path refid="dependencies" />
+        <pathelement path="bin"/>
     </path>
 
     <path id="test-classpath">
@@ -63,9 +64,27 @@
         />
     </target>
 
-    <target name="run-fitnesse-tests" depends="test-compile">
+    <target name="clean-testreports">
         <delete dir="target/test-reports" />
         <mkdir dir="target/test-reports" />
+    </target>
+
+    <target name="run-tests" depends="test-compile, clean-testreports">
+        <junit printsummary="true" haltonerror="false" haltonfailure="false" showoutput="false" failureproperty="failureoccured" >
+            <classpath>
+                <path refid="test-classpath" />
+                <pathelement path="target/test-classes"/>
+            </classpath>
+            <batchtest todir="target/test-reports/">
+                <fileset dir="target/test-classes" excludes="**/*SuiteTest.class" includes="**/*Test.class"/>
+            </batchtest>
+            <formatter type="xml" />
+        </junit>
+        <fail if="failureoccured" message="junit tests failed"/>
+    </target>
+
+	
+    <target name="run-fitnesse-tests" depends="test-compile, clean-testreports">
         <antcall target="run-fitnesse-suite">
             <param name="suitename" value="JavaScript" />
         </antcall>

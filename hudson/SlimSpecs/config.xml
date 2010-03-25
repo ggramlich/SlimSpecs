@@ -69,7 +69,7 @@
       <target>fitnesse/waferslim</target>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Ant>
-      <targets>clean run-fitnesse-tests</targets>
+      <targets>clean run-tests run-fitnesse-tests</targets>
       <properties>hudsonbuild=true
 update-dependencies=true</properties>
     </hudson.tasks.Ant>
