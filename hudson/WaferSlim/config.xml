@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.plugins.bazaar.BazaarSCM">
-    <source>lp:waferslim</source>
+    <source>https://launchpad.net/waferslim</source>
     <clean>false</clean>
   </scm>
   <canRoam>true</canRoam>
