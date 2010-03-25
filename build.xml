@@ -106,7 +106,7 @@
         <fail if="failureoccured" message="fitnesse tests failed"/>
     </target>
 
-    <target name="run-fitnesse-suite">
+    <target name="run-fitnesse-suite" depends="test-compile">
         <echo message="Executing suite: ${suitename}." />
         <junit printsummary="true" haltonerror="false" haltonfailure="false" showoutput="false" failureproperty="failureoccured" >
             <classpath>

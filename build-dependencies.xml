@@ -22,10 +22,16 @@
                 <include name="*.jar"/>
             </fileset>
         </copy>
+        <available file="${fitnessedir}/dist/rubyslim/lib" property="rubyslim-hudson-exists" type="dir" />
+        <antcall target="copy-rubyslim-hudson"></antcall>        
+        <available file="${fitnessedir}/waferslim/local-python3.sh" property="local-python-exists" />
+        <antcall target="local-python"></antcall>
+    </target>
+
+    <target name="copy-rubyslim-hudson" if="rubyslim-hudson-exists">
         <copy todir="${fitnessedir}/rubyslim">
             <fileset dir="${fitnessedir}/dist/rubyslim/lib" />
         </copy>
-        <antcall target="local-python"></antcall>
     </target>
 
     <target name="build-fitnesse">
@@ -65,10 +71,11 @@
         <copy todir="${fitnessedir}/waferslim">
             <fileset dir="../waferslim" />
         </copy>
+        <available file="${fitnessedir}/waferslim/local-python3.sh" property="local-python-exists" />
         <antcall target="local-python"></antcall>
     </target>
 
-    <target name="local-python">
+    <target name="local-python" if="local-python-exists">
         <chmod perm="755" file="${fitnessedir}/waferslim/local-python3.sh"></chmod>
     </target>
 </project>
