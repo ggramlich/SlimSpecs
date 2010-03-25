@@ -56,7 +56,7 @@ fitnesse.do-not-build=true</properties>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
-      <childProjects>SlimSpecs</childProjects>
+      <childProjects>SlimSpecs, SlimSpecsPhp</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

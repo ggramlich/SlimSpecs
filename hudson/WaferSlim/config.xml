@@ -24,7 +24,7 @@
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
-      <childProjects>SlimSpecs</childProjects>
+      <childProjects>SlimSpecs, SlimSpecsPython</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Checkout FitNesse</description>
+  <description>Build SlimSpecs and dependencies (FitNesse, RubySlim, JsSlim, PhpSlim)</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>1</configVersion>
     <remoteRepositories>
       <org.spearce.jgit.transport.RemoteConfig>
-        <string>origin</string>
+        <string>SlimSpecs</string>
         <int>5</int>
         <string>fetch</string>
-        <string>+refs/heads/*:refs/remotes/origin/*</string>
+        <string>+refs/heads/*:refs/remotes/origin4/*</string>
         <string>receivepack</string>
         <string>git-upload-pack</string>
         <string>uploadpack</string>
         <string>git-upload-pack</string>
         <string>url</string>
-        <string>git://github.com/ggramlich/fitnesse.git</string>
+        <string>/home/gramlich/workspace/SlimSpecs</string>
         <string>tagopt</string>
         <string></string>
       </org.spearce.jgit.transport.RemoteConfig>
@@ -37,29 +37,38 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>*/15 * * * *
+      <spec>*/5 * * * *
 </spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
+    <hudson.plugins.copyartifact.CopyArtifact>
+      <projectName>FitNesse</projectName>
+      <filter>dist/fitnesse.jar</filter>
+      <target>fitnesse</target>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.plugins.copyartifact.CopyArtifact>
+      <projectName>PhpSlim</projectName>
+      <filter>dist/phpslim.jar</filter>
+      <target>fitnesse</target>
+    </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Ant>
-      <targets>jar</targets>
+      <targets>clean clean-testreports run-fitnesse-suite</targets>
+      <properties>hudsonbuild=true
+update-dependencies=true
+suitename=Php</properties>
     </hudson.tasks.Ant>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>dist/fitnesse.jar</artifacts>
+      <artifacts>target/test-reports/fitnesse/**</artifacts>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>SlimSpecs, JsSlim, PhpSlim, SlimSpecsJava, SlimSpecsRuby, SlimSpecsPhp, SlimSpecsJavaScript, SlimSpecsPython</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>target/test-reports/*.xml</testResults>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
   </publishers>
   <buildWrappers/>
 </project>
