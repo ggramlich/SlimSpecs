@@ -1,4 +1,6 @@
 !define TEST_RUNNER {slim.PhpSlimService}
 !define COMMAND_PATTERN (java -cp ${FITNESSE_ROOTPATH}/fitnesse/phpslim.jar %m -i ${FITNESSE_ROOTPATH}/php)
 
+!define SLIM_PORT (${PHP_SLIM_PORT})
+
 !contents

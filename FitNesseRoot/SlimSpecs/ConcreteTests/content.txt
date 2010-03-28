@@ -1,1 +1,4 @@
+We give every Test Suite its own port range, because otherwise we get into trouble when hudson runs multiple tests simultaneously.
+http://fitnesse.org/FitNesse.UserGuide.SliM.SlimProtocol.PortManagement
+
 !contents
