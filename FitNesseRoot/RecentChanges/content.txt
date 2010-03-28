@@ -1,3 +1,7 @@
+|SlimSpecs.ConcreteTests.RubyTests.SlimExamples.TypeConversionTests.DoubleTest||21:43:36 Sun, Mar 28, 2010|
+|SlimSpecs.ConcreteTests.PythonTests.SlimExamples.TypeConversionTests.DoubleTest||21:40:20 Sun, Mar 28, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.DoubleTest||21:38:23 Sun, Mar 28, 2010|
+|SlimSpecs.ConcreteTests.PhpTests.SlimExamples.TypeConversionTests.DoubleTest||20:38:05 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.RubyTests||18:43:36 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PhpTests||18:43:13 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.MonoCsharpTests||18:42:13 Sun, Mar 28, 2010|
@@ -9,14 +13,10 @@
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.IntegerTest||18:23:25 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PhpTests.SlimExamples.TypeConversionTests.OptionalDoubleTest||18:22:16 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PythonTests.SlimExamples.TypeConversionTests.OptionalDoubleTest||18:19:59 Sun, Mar 28, 2010|
-|SlimSpecs.ConcreteTests.PythonTests.SlimExamples.TypeConversionTests.DoubleTest||17:55:27 Sun, Mar 28, 2010|
-|SlimSpecs.ConcreteTests.PhpTests.SlimExamples.TypeConversionTests.DoubleTest||17:39:15 Sun, Mar 28, 2010|
-|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.DoubleTest||17:31:44 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.EchoStringTest||17:29:13 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.StringTest||17:28:54 Sun, Mar 28, 2010|
 |SlimSpecs.AbstractTests.SlimExamples.TypeConversionTests.StringTest||17:26:48 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.ScenarioLibrary||17:22:17 Sun, Mar 28, 2010|
-|SlimSpecs.ConcreteTests.RubyTests.SlimExamples.TypeConversionTests.DoubleTest||21:41:42 Thu, Mar 25, 2010|
 |SlimSpecs.ConcreteTests.PythonTests.MoreInfo||22:44:25 Wed, Mar 24, 2010|
 |ErrorLogs.SlimSpecs.ConcreteTests.PythonTests||21:48:50 Wed, Mar 24, 2010|
 |SlimSpecs.ConcreteTests.MonoCsharpTests.SlimExamples.TypeConversionTests.DoubleTest||09:03:10 Tue, Mar 23, 2010|
