@@ -1,7 +1,8 @@
 -|script|
-|start    |echo fixture                   |
-|check    |echo string|Hello|Hello        |
-|check    |echo string|Hello|=~/H[a,e]llo/|
-|check    |echo string|Hallo|=~/H[a,e]llo/|
-|check not|echo string|Hillo|=~/H[a,e]llo/|
+|start|echo fixture                   |
+|check|echo string|Hello|Hello        |
+|check|echo string|Hello|=~/H[a,e]llo/|
 
+-|script|
+|start    |echo fixture                   |
+|check not|echo string|Hillo|=~/H[a,e]llo/|

@@ -1,5 +1,6 @@
 !|the value converts to the integer|
 |input           |output           |
 |0               |0                |
+|-0              |0                |
 |1               |1                |
 |-1              |-1               |

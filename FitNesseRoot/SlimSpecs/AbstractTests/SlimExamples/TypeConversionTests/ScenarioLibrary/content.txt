@@ -1,3 +1,7 @@
+!|scenario|the value  |input |converts to the string|output|
+|start    |echo fixture                                    |
+|check    |echo string|@input|@output                      |
+
 !|scenario|the value|input |converts to the integer|output|
 |start    |echo fixture                                   |
 |check    |echo int |@input|@output                       |

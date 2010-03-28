@@ -1,0 +1,4 @@
+!|the value converts to the double|
+|input           |output          |
+|-0.0            |-0.0            |
+|-0              |-0.0            |

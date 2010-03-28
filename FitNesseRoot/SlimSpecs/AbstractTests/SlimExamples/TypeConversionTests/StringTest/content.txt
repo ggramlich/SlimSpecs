@@ -1,0 +1,7 @@
+!|the value converts to the string|
+|input       |output              |
+|Hello       |Hello               |
+|Hello       |=~/H[a,e]llo/       |
+|            |                    |
+|0.10        |0.10                |
+|1.0E6       |1.0E6               |
