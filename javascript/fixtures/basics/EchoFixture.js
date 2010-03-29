@@ -8,7 +8,7 @@ fixtures.basics.EchoFixture = function() {
     }
     
     this.echoDouble = function(value) {
-        return parseFloat(value)
+        return JsSlim.Converter.floatToString(parseFloat(value));
     }
     
     this.echoFloat = function(value) {
