@@ -1,0 +1,10 @@
+A [[Symbol][.FitNesse.UserGuide.SliM.SymbolsInTables]] in Slim tables is identified by a preceding $ sign.
+
+I no value is assigned to a symbol, then it is not evaluated.
+
+!|library    |
+|echo fixture|
+
+!|script                          |
+|show |echo string|$symbol        |
+|check|echo string|$symbol|$symbol|

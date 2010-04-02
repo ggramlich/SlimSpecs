@@ -1,27 +1,45 @@
-!|the value converts to the double |
-|input     |output                 |
-|0         |0.0                    |
-|1         |1.0                    |
-|-1        |-1.0                   |
-|0.0       |0.0                    |
-|.1        |0.1                    |
-|.9        |0.9                    |
-|-.9       |-0.9                   |
-|1.0100    |1.01                   |
-|1.000001  |1.000001               |
-|-1.000001 |-1.000001              |
-|0.999999  |0.999999               |
-|-0.999999 |-0.999999              |
-|33.33333  |33.33333               |
-|-33.33333 |-33.33333              |
-|0.001     |0.001                  |
-|1E-3      |0.001                  |
-|0.00001   |=~/1(\.0)?[E,e]-0?5/   |
-|0.00001234|=~/1.234[E,e]-0?5/     |
-|-0.01     |-0.01                  |
-|-0.000001 |=~/-1(\.0)?[E,e]-0?6/  |
-|1E-6      |=~/1(\.0)?[E,e]-0?6/   |
-|1.01E2    |101.0                  |
-|1000000   |1000000.0              |
-|1e14      |=~/1(\.0)?[E,e](\+)?14/|
-|1234E20   |=~/1.234[E,e](\+)?23/  |
+Floating point parsing and rendering. We expect a .0 for integer values rendered as doubles.
+
+!|the value converts to the double|
+|input           |output          |
+|0               |0.0             |
+|1               |1.0             |
+|-1              |-1.0            |
+|0.0             |0.0             |
+|.1              |0.1             |
+|.9              |0.9             |
+|-.9             |-0.9            |
+|1.0100          |1.01            |
+|1.000001        |1.000001        |
+|-1.000001       |-1.000001       |
+|0.999999        |0.999999        |
+|-0.999999       |-0.999999       |
+|33.33333        |33.33333        |
+|-33.33333       |-33.33333       |
+|0.001           |0.001           |
+|-0.01           |-0.01           |
+|1000000         |1000000.0       |
+|-1000000        |-1000000.0      |
+
+Parsing with scientific notation.
+
+!|the value converts to the double|
+|input           |output          |
+|1E-3            |0.001           |
+|1.01E2          |101.0           |
+
+Absolute values smaller than 1E-4 and absolute values larger or equal to 1E14 should be rendered with scientific notation.
+
+The various languages have different ways of rendering scientific notation with capital or lower case, with or without trailing .0.
+There is also different treatment of rendering as normal or scientific normal for values between 1E7 and 1E14.
+
+!|the value converts to the double  |
+|input     |output                  |
+|0.00001   |=~/1(\.0)?[E,e]-0?5/    |
+|0.00001234|=~/1.234[E,e]-0?5/      |
+|-0.000001 |=~/-1(\.0)?[E,e]-0?6/   |
+|1E-6      |=~/1(\.0)?[E,e]-0?6/    |
+|1e14      |=~/1(\.0)?[E,e](\+)?14/ |
+|-1e14     |=~/-1(\.0)?[E,e](\+)?14/|
+|1234E20   |=~/1.234[E,e](\+)?23/   |
+

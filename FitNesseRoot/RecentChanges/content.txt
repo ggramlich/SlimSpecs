@@ -1,6 +1,7 @@
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.SymbolsTests.SymbolEvaluationTest||10:20:02 Fr, Apr 02, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.DoubleTest||13:21:03 Mi, Mrz 31, 2010|
 |SlimSpecs.ConcreteTests.RubyTests.SlimExamples.TypeConversionTests.DoubleTest||21:43:36 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PythonTests.SlimExamples.TypeConversionTests.DoubleTest||21:40:20 Sun, Mar 28, 2010|
-|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.DoubleTest||21:38:23 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PhpTests.SlimExamples.TypeConversionTests.DoubleTest||20:38:05 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.RubyTests||18:43:36 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PhpTests||18:43:13 Sun, Mar 28, 2010|
