@@ -2,6 +2,8 @@
 |start|echo fixture                   |
 |check|echo string|Hello|Hello        |
 |check|echo string|Hello|=~/H[a,e]llo/|
+|check|echo string|Köln |Köln         |
+|check|echo string|Köln |=~/K.ln/     |
 
 -|script|
 |start    |echo fixture                   |
