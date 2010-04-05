@@ -3,6 +3,7 @@ bin
 fitnesse/fitnesse.jar
 fitnesse/jsSlim.jar
 fitnesse/phpslim.jar
+fitnesse/phpslim.phar
 fitnesse/rubyslim
 fitnesse/waferslim
 #FitNesseRoot/FitNesse/

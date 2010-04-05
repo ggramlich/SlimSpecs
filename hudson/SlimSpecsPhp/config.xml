@@ -50,7 +50,7 @@
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>PhpSlim</projectName>
-      <filter>dist/phpslim.jar</filter>
+      <filter>dist/phpslim.*</filter>
       <target>fitnesse</target>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Ant>
@@ -58,6 +58,10 @@
       <properties>hudsonbuild=true
 update-dependencies=true
 suitename=Php</properties>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant>
+      <targets>run-fitnesse-suite</targets>
+      <properties>suitename=PharPhp</properties>
     </hudson.tasks.Ant>
   </builders>
   <publishers>

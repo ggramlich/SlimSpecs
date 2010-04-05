@@ -1,0 +1,6 @@
+!define TEST_RUNNER (${FITNESSE_ROOTPATH}/fitnesse/phpslim.phar)
+!define COMMAND_PATTERN (php %m ${FITNESSE_ROOTPATH}/php)
+
+!define SLIM_PORT (${PHAR_PHP_SLIM_PORT})
+
+!contents

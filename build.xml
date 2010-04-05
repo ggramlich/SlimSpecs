@@ -95,6 +95,9 @@
             <param name="suitename" value="Php" />
         </antcall>
         <antcall target="run-fitnesse-suite">
+            <param name="suitename" value="PharPhp" />
+        </antcall>
+        <antcall target="run-fitnesse-suite">
             <param name="suitename" value="Ruby" />
         </antcall>
         <antcall target="run-fitnesse-suite">

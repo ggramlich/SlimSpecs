@@ -49,7 +49,7 @@
       <target>lib</target>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Ant>
-      <targets>jar</targets>
+      <targets>all</targets>
       <buildFile>build/build.xml</buildFile>
       <properties>fitnesse.jarfile=lib/dist/fitnesse.jar
 fitnesse.do-not-build=true</properties>
@@ -57,7 +57,7 @@ fitnesse.do-not-build=true</properties>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>dist/phpslim.jar</artifacts>
+      <artifacts>dist/phpslim.*</artifacts>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>

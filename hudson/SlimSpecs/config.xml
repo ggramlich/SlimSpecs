@@ -50,7 +50,7 @@
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>PhpSlim</projectName>
-      <filter>dist/phpslim.jar</filter>
+      <filter>dist/phpslim.*</filter>
       <target>fitnesse</target>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact>

@@ -20,6 +20,7 @@
         <copy todir="${fitnessedir}">
             <fileset dir="${fitnessedir}/dist">
                 <include name="*.jar"/>
+                <include name="phpslim.phar"/>
             </fileset>
         </copy>
         <available file="${fitnessedir}/dist/rubyslim/lib" property="rubyslim-hudson-exists" type="dir" />
@@ -49,6 +50,7 @@
     
     <target name="build-phpslim">
         <ant antfile="build/build.xml" target="jar" dir="../phpslim"/>
+        <ant antfile="build/build.xml" target="phar" dir="../phpslim"/>
         <copy todir="${fitnessedir}">
             <fileset dir="../phpslim/dist" />
         </copy>

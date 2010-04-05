@@ -1,3 +1,7 @@
+|SlimSpecs.ConcreteTests.PharPhpTests||08:11:45 Mo, Apr 05, 2010|
+|||08:11:13 Mo, Apr 05, 2010|
+|SlimSpecs.ConcreteTests.PurePhpTests||19:32:57 So, Apr 04, 2010|
+|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.EchoStringTest||15:10:38 Sat, Apr 03, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.SymbolsTests.SymbolEvaluationTest||10:20:02 Fr, Apr 02, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.DoubleTest||13:21:03 Mi, Mrz 31, 2010|
 |SlimSpecs.ConcreteTests.RubyTests.SlimExamples.TypeConversionTests.DoubleTest||21:43:36 Sun, Mar 28, 2010|
@@ -10,11 +14,9 @@
 |SlimSpecs.ConcreteTests.JavaScriptTests||18:41:13 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PythonTests||18:40:19 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests||18:39:49 Sun, Mar 28, 2010|
-|||18:38:52 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.IntegerTest||18:23:25 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PhpTests.SlimExamples.TypeConversionTests.OptionalDoubleTest||18:22:16 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.PythonTests.SlimExamples.TypeConversionTests.OptionalDoubleTest||18:19:59 Sun, Mar 28, 2010|
-|SlimSpecs.ConcreteTests.JavaTests.SlimExamples.EchoStringTest||17:29:13 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.StringTest||17:28:54 Sun, Mar 28, 2010|
 |SlimSpecs.AbstractTests.SlimExamples.TypeConversionTests.StringTest||17:26:48 Sun, Mar 28, 2010|
 |SlimSpecs.ConcreteTests.JavaTests.SlimExamples.TypeConversionTests.ScenarioLibrary||17:22:17 Sun, Mar 28, 2010|
